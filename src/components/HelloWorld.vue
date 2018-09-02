@@ -52,7 +52,7 @@ export default {
 }
 .widget-wrapper {
   position: absolute;
-  height: 100%;
+  height: 90%;
   width: 100%;
   top: 0;
   left: 0;
@@ -60,15 +60,14 @@ export default {
   background-size: cover;
   background-position: center center;
   color: white;
-  height: 100%;
+  padding-top: 5%;
+  padding-bottom: 1%;
 }
 .widget-flex-column {
-  padding-top: 5%;
-  padding-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 90%;
 }
 .widget-flex-row-data {
   height: 25%;
