@@ -1,38 +1,38 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa" target="_blank">pwa</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank">eslint</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest" target="_blank">unit-jest</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="widget-wrapper">
+    <img class="logo-esc" src="../../src/assets/img/logo-esports-calendar.png" alt="">
+    <div class="container widget-flex-column">
+      <div class="row widget-flex-row-data">
+        <span class="hour-match">
+          19:30h
+        </span>
+      </div>
+      <div class="row widget-flex-row-shields">
+        <div class="widget-shield-wrapper">
+          <img class="widget-shield" src="../../src/assets/img/logo-mad-lions.png" alt="">
+        </div>
+        <div class="widget-shield-vs">
+          <span>vs</span>
+        </div>
+        <div class="widget-shield-wrapper">
+          <img class="widget-shield" src="../../src/assets/img/logo-kiyf.png" alt="">
+        </div>
+      </div>
+      <div class="row widget-flex-row-data">
+        <div class="widget-data-match-wrapper">
+          <div class="widget-data-match">
+            <span>Joranada 1</span>
+            <img class="widget-shield widget-data-match-shield" src="../../src/assets/img/logo-lol.png" alt="" style="right:40%;">
+            <img class="widget-shield widget-data-match-shield" src="../../src/assets/img/logo-esl.png" alt="" style="right: 10%;">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+// import bootstrap from '../../node_modules/bootstrap/scss/bootstrap.scss'
 export default {
   name: 'HelloWorld',
   props: {
@@ -43,18 +43,89 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+.logo-esc {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  height: 20%;
+  width: auto;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.widget-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../../src/assets/img/bg-lol.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  height: 100%;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.widget-flex-column {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
-a {
-  color: #42b983;
+.widget-flex-row-data {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+.hour-match{
+  font-size: 10vh;
+  font-weight: 700;
+}
+.widget-flex-row-shields {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%
+}
+.widget-shield-wrapper {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.widget-shield-vs {
+  font-size: 10vh;
+  font-weight: 700;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.widget-shield {
+  height: 100%;
+  width: auto;
+}
+.widget-data-match-wrapper {
+  padding: 5% 20%;
+  width: 100%;
+}
+.widget-data-match {
+  font-size: 5vh;
+  font-weight: bold;
+  background-color: #3882EE;
+  padding: 2% 7%;
+  position: relative;
+  border-radius: 6px;
+}
+.widget-data-match-shield{
+  position: absolute;
+  height: 150%;
+  top: -25%;
+}
+
 </style>
